@@ -1,0 +1,20 @@
+<h3>Range Input</h3>
+<form [formGroup]="form">
+With Units Toggle
+<supre-range-input
+  formControlName="range1"
+  total="5000000"
+  minPlaceholder="Enter Min"
+  maxPlaceholder="Enter Max">
+</supre-range-input>
+range ({{range1.units}}) : {{range1.min || '--'}} to {{range1.max || '--'}}
+<br><br>
+Without Units Toggle
+<supre-range-input
+  formControlName="range2"
+  [showUnits]="false"
+  minPlaceholder="Enter Min"
+  maxPlaceholder="Enter Max">
+</supre-range-input>
+range : {{range2.min || '--'}} to {{range2.max || '--'}}
+</form>

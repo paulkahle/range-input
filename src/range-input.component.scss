@@ -1,0 +1,54 @@
+@import 'utils/_colors.scss';
+@import "../node_modules/suprematism-style-guide/dist/utils/_text.scss";
+
+:host{
+
+  display:flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin:0;
+  border:1px solid $active-stroke;
+  background-color: $white;
+
+  .to-label{
+    align-self: center;
+    padding:0 1em;
+  }
+
+  button.-toggle{
+    line-height:inherit;
+    border-width:0 1px 0 0;
+    margin:0;
+    min-width:3em;
+    width:3em;
+    height:auto;
+  }
+  /deep/ input{
+    line-height:inherit;
+    display:block;
+  }
+
+  supre-clearable-input{
+    flex-grow:1;
+  }
+
+  supre-clearable-input /deep/ input{
+    border-width:0;
+    min-height:0px;
+    background-color:transparent;
+    font-size:inherit;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  supre-clearable-input.min /deep/ input{
+    border-right:1px dashed $active-stroke;
+  }
+  supre-clearable-input.max /deep/ input{
+    border-left:1px dashed $active-stroke;
+  }
+}

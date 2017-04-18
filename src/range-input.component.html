@@ -1,0 +1,6 @@
+
+<button class="-toggle" *ngIf="showUnits" [ngClass]="{'is-active': value.units==='total'}" (click)="setUnits('total')">#</button>
+<button class="-toggle" *ngIf="showUnits" [ngClass]="{'is-active': value.units==='percent'}" (click)="setUnits('percent')">%</button>
+<supre-clearable-input (keypress)="handleKeyPress($event)" type="number" class="min" [placeholder]="minPlaceholder" [value]="value.min" (valueChange)="setMin($event)"></supre-clearable-input>
+<div class="to-label">TO</div>
+<supre-clearable-input (keypress)="handleKeyPress($event)" type="number" class="max" [placeholder]="maxPlaceholder" [value]="value.max" (valueChange)="setMax($event)"></supre-clearable-input>
